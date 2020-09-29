@@ -1,0 +1,7 @@
+{
+  "name": "comic_reader",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
