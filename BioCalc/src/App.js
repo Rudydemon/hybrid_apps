@@ -8,13 +8,14 @@ import {
   IonItem,
   IonLabel,
   IonDatetime,
-  IonCard,
-  IonCardHeader
 } from '@ionic/react';
+
 import React, { useState } from 'react';
+import BioCard from './components/BioCard';
 
 function App() {
   const [bDay, setBDay] = useState('');
+  const targetDate = new Date().toISOString();
   return (
     <IonApp>
       <IonHeader>
@@ -30,10 +31,9 @@ function App() {
             onIonChange={(event) => setBDay(event.detail.value)}
           />
         </IonItem>
-        <IonCard>
-          <IonCardHeader>
-          </IonCardHeader>
-        </IonCard>
+        {bDay && //Show card only when bday is chosen
+          <BioCard birthDate={bDay} targetDate={targetDate}/>
+        }
       </IonContent>
     </IonApp>
   );
