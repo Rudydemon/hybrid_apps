@@ -4,7 +4,6 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonInput,
   IonItem,
   IonLabel,
   IonDatetime,
@@ -12,10 +11,11 @@ import {
 
 import React, { useState } from 'react';
 import BioCard from './components/BioCard';
+import {useLocalStorage} from './hooks';
 
 function App() {
-  const [bDay, setBDay] = useState(''); //birthday
-  const [tDay, setTDay] = useState(''); //target date
+  const [bDay, setBDay] = useLocalStorage('bDay' , ''); //birthday
+  const [tDay, setTDay] = useState(new Date().toISOString()); //target date start on todays date
   // const targetDate = new Date().toISOString(); original target date for "todays date"
   return (
     <IonApp>

@@ -1,0 +1,13 @@
+.bio-card p {
+  line-height: normal;
+}
+
+.bio-card .emotional{
+  color: var(--app-emotional-color);
+}
+.bio-card .physical{
+  color: var(--app-physical-color);
+}
+.bio-card .intellectual{
+  color: var(--app-intellectual-color);
+}
